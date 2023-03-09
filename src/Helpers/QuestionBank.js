@@ -8,7 +8,7 @@ export const Questions = [
         answer: "C",
     },
     {
-        prompt: "Who Develop React.js?",
+        prompt: "Who Developed React.js?",
         optionA: "Google",
         optionB: "Facebook",
         optionC: "Twitter",

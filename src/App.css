@@ -69,3 +69,9 @@ h3{
 .zero-score{
   color: red;
 }
+
+@media screen and (max-width:500px){
+  h1 {
+    font-size: 5.2vw;
+  }
+}
