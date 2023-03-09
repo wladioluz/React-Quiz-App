@@ -7,7 +7,7 @@ export default function MainMenu() {
 
     return (
         <div className="Menu">
-            <button onClick={() => {setGameState("quiz")}}>
+            <button className="btn" onClick={() => {setGameState("quiz")}}>
             Start Quiz
             </button>
         </div>

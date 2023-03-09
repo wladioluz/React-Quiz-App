@@ -1,3 +1,8 @@
+body {
+  background-color: #161a27;
+  color: #babdc4; 
+}
+
 .App {
   font-family: Arial, Helvetica, sans-serif;
   display: flex;
@@ -6,23 +11,34 @@
   flex-direction: column;
 }
 
+.title{
+  font-size: 3rem;
+}
+
 .Menu,
 .Quiz,
 .EndScreen {
   width: 500px;
   height: 500px;
   border-radius: 10px;
-  background-color: rgb(5, 1, 212);
+  background-color: #1f3a93;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  color: white;
+  color: #f1f2f3;
 }
 
-.Menu button, 
-.Quiz button,
-.EndScreen button {
+h1{
+  font-size: 1.5rem;
+}
+
+h3{
+  font-size: 3rem;
+  color: green;
+}
+
+.btn {
   width: 300px;
   height: 50px;
   margin: 5px;
@@ -30,12 +46,26 @@
   border-radius: 5px;
   font-size: 20px;
   cursor: pointer;
-}
-
-.options {
-  width: 100%;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
+}
+
+.opt-btn:focus{
+  background-color:#969aa6;
+}
+
+.btn:hover{
+  background-color:#969aa6;
+}
+
+.act-btn{
+  width: auto;
+  height: auto;
+  background-color:#afb5c8;
+}
+
+.zero-score{
+  color: red;
 }

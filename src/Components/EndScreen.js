@@ -12,11 +12,22 @@ function EndScreen() {
         setGameState("menu");
     };
 
+    /* const zeroScore = () => {
+        let score = document.getElementById("finalScore");
+        score.classList.add("zero-score");
+    }
+
+    const notZeroScore = () => {
+        let score = document.getElementById("finalScore");
+        score.classList.remove("zero-score");
+    } */
+
     return (
         <div className="EndScreen">
             <h1>Quiz Finished</h1>
-            <h3> {score} / {Questions.length} </h3> 
-            <button onClick={restartQuiz}> Restart Quiz </button>
+            <h3 id="finalScore"> {score} / {Questions.length} </h3> 
+            {/* {score == 0 ? zeroScore() : notZeroScore() } */}
+            <button className="btn" onClick={restartQuiz}> Restart Quiz </button>
         </div>
     )
 }

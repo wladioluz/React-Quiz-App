@@ -1,6 +1,7 @@
 import React, { useState, useContext } from "react";
 import { Questions } from "../Helpers/QuestionBank";
 import { QuizContext } from '../Helpers/Contexts'; 
+import "../App.css";
 
 function Quiz() {
     const {score, setScore, setGameState} = useContext(QuizContext);
@@ -27,16 +28,16 @@ function Quiz() {
         <div className="Quiz">
             <h1>{Questions[currQuestion].prompt}</h1>
             <div className="options">
-                <button onClick={() => setOptionChosen("A")}> {Questions[currQuestion].optionA} </button>
-                <button onClick={() => setOptionChosen("B")}> {Questions[currQuestion].optionB} </button>
-                <button onClick={() => setOptionChosen("C")}> {Questions[currQuestion].optionC} </button>
-                <button onClick={() => setOptionChosen("D")}> {Questions[currQuestion].optionD} </button>
+                <button className="btn opt-btn" onClick={() => setOptionChosen("A")}> {Questions[currQuestion].optionA} </button>
+                <button className="btn opt-btn" onClick={() => setOptionChosen("B")}> {Questions[currQuestion].optionB} </button>
+                <button className="btn opt-btn" onClick={() => setOptionChosen("C")}> {Questions[currQuestion].optionC} </button>
+                <button className="btn opt-btn" onClick={() => setOptionChosen("D")}> {Questions[currQuestion].optionD} </button>
             </div>
 
             {currQuestion == Questions.length -1 ? (
-                <button onClick={finishQuiz}> Finish Quiz </button>
+                <button className="btn act-btn" onClick={finishQuiz}> Finish Quiz </button>
                 ) : (
-                <button onClick={nextQuestion}> Next Question </button>
+                <button className="btn act-btn" onClick={nextQuestion}> Next Question </button>
             )}
         </div>
     )
